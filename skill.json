@@ -1,0 +1,36 @@
+{
+  "name": "genpark-dead-code-unreachable-ast-pruner-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Whole-program callgraph reachability pruner locating unreachable functions, unused exports, and stale feature flags.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "service",
+  "tags": [
+    "dead-code",
+    "tree-shaking",
+    "ast-pruner",
+    "code-cleanup",
+    "feature-flags"
+  ],
+  "inputs": {
+    "repository_path": {
+      "type": "string"
+    },
+    "total_source_files": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "prune_audit_id": {
+      "type": "string"
+    },
+    "unreachable_functions_count": {
+      "type": "integer"
+    },
+    "obsolete_feature_flags_detected": {
+      "type": "array"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
